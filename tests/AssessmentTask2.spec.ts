@@ -32,7 +32,7 @@ test(`Assessment Task 2`, async ({ page }): Promise<void> => {
     await holidayEntitlementPage.continueOn(page);
 
     const daysWorkedPerWeekPage = new DaysWorkedPerWeekPage();
-    await daysWorkedPerWeekPage.checkPageContent(page);
+    await daysWorkedPerWeekPage.checkPageContentAfterShifts(page);
     await daysWorkedPerWeekPage.selectStartingAndLeaving(page);
     await daysWorkedPerWeekPage.continueOn(page);
 

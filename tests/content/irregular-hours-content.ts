@@ -9,6 +9,10 @@ export const hint = {
     ‘Part of the year’ means there are periods of at least a week in a leave year where the employee does not need to work and is not paid.`
 }
 
+export const error = {
+    errorLabel : `There is a problem `
+}
+
 export const irregularRadioButtons = {
     yes : {
         label :`Yes`,

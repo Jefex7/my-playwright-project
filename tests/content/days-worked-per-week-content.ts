@@ -1,31 +1,25 @@
 export const headings = {
     holidayEntitlement : `Calculate holiday entitlement`,
-    workOutHoliday : `Is the holiday entitlement based on:`
+    workOutHoliday : `Do you want to work out holiday:`,
+    calculateHoliday: `Do you want to calculate the holiday:`
 }
 
-export const hint = {
-    entitlementBasedOn : `Check the employment contract if you’re not sure about the holiday entitlement.`
-}
 
 export const radioButtons = {
-    days: {
-        label: 'days worked per week',
+    fullYear: {
+        label: 'for a full leave year',
         selector: `#response-0`
     },
-    hours: {
-        label: 'hours worked per week',
+    starting: {
+        label: 'for someone starting part way through a leave year',
         selector: `#response-1`
     },
-    annual: {
-        label:`annualised hours`,
+    leaving: {
+        label:`for someone leaving part way through a leave year`,
         selector: `#response-2`
     },
-    compressed: {
-        label: 'compressed hours',
+    startingAndLeaving: {
+        label: 'for someone starting and leaving part way through a leave year',
         selector: `#response-3`
     },
-    shifts: {
-        label:`shifts`,
-        selector: `#response-4`
-    }
 }

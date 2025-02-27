@@ -1,27 +1,30 @@
 import {Page} from 'playwright';
 import {expect} from "@playwright/test";
 import axeTest from "../accessibilityTestHelper";
-import {headings, inputForm} from "../content/how-many-shift-content";
+import {headings, inputForm, hint} from "../content/how-many-days-shift-pattern-content";
 
-export default class HowManyShiftPage {
+export default class HowManyDaysPatternPage {
     private readonly title: string;
     private readonly heading1: string;
+    private readonly hint: string;
 
     constructor() {
         this.title = `.govuk-caption-l`,
-            this.heading1 = `.govuk-fieldset__heading`
+            this.heading1 = `label[for='response']`
+            this.hint = `.govuk-hint`
     }
 
     async checkPageContent(page: Page): Promise<void> {
         await Promise.all([
             expect(page.locator(this.title)).toContainText(headings.holidayEntitlement),
-            expect(page.locator(this.heading1)).toContainText(headings.shiftsPerShiftPattern),
+            expect(page.locator(this.heading1)).toContainText(headings.daysShiftPattern),
+            expect(page.locator(this.hint)).toContainText(hint.daysShiftPattern),
         ]);
         await axeTest(page);
     }
 
-    async fillShiftPerShiftPattern(page : Page) {
-        await page.fill(inputForm.selector, '2');
+    async fillDaysInShiftPattern(page : Page) {
+        await page.fill(inputForm.selector, '3');
     }
 
     async continueOn(page: Page): Promise<void> {

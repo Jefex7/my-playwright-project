@@ -1,6 +1,6 @@
 export const headings = {
     holidayEntitlement : `Calculate holiday entitlement`,
-    howManyHours : `How many hours in each shift?`
+    shiftsPerShiftPattern : `How many shifts will be worked per shift pattern?`
 }
 
 export const inputForm = {
